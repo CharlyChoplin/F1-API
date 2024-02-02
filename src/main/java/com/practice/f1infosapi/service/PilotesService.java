@@ -37,4 +37,8 @@ public class PilotesService {
             return pilotesRepository.save(piloteToUpdate);
         }
     }
+
+    public void deletePilote(Integer id) {
+        pilotesRepository.deleteById(id);
+    }
 }

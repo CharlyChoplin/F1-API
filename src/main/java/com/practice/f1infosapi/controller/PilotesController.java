@@ -22,7 +22,7 @@ public class PilotesController {
 
     // Get driver by ID
     @GetMapping("/api/v1/pilotes/{id}")
-    public PilotesDto getById(@PathVariable int id) {
+    public PilotesDto getById(@PathVariable Integer id) {
        return pilotesMapper.toDto(pilotesService.getById(id));
     }
 
@@ -30,6 +30,13 @@ public class PilotesController {
     @PostMapping("/api/v1/pilotes")
     public PilotesDto createOrUpdatePilote(@RequestBody PilotesDto form) {
         return pilotesMapper.toDto(pilotesService.createOrUpdatePilote(form));
+    }
+
+
+    // Delete driver
+    @DeleteMapping("/api/v1/pilotes/{id}")
+    public void deletePilote(@PathVariable Integer id) {
+        pilotesService.deletePilote(id);
     }
 }
 
