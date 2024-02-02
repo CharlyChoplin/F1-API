@@ -4,9 +4,7 @@ import com.practice.f1infosapi.dto.PilotesDto;
 import com.practice.f1infosapi.mapper.PilotesMapper;
 import com.practice.f1infosapi.service.PilotesService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +24,12 @@ public class PilotesController {
     @GetMapping("/api/v1/pilotes/{id}")
     public PilotesDto getById(@PathVariable int id) {
        return pilotesMapper.toDto(pilotesService.getById(id));
+    }
+
+    // Create driver
+    @PostMapping("/api/v1/pilotes")
+    public PilotesDto createOrUpdatePilote(@RequestBody PilotesDto form) {
+        return pilotesMapper.toDto(pilotesService.createOrUpdatePilote(form));
     }
 }
 

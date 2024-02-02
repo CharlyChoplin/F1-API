@@ -9,9 +9,19 @@ public class PilotesMapper {
     public PilotesDto toDto(PilotesEntity pilotesEntity) {
         PilotesDto pilotesDto = new PilotesDto();
 
+        pilotesDto.setId(pilotesEntity.getId());
         pilotesDto.setName(pilotesEntity.getName());
         pilotesDto.setSurname(pilotesEntity.getSurname());
 
         return pilotesDto;
+    }
+
+    public PilotesEntity toEntity(PilotesDto pilotesDto) {
+        PilotesEntity pilotesEntity = new PilotesEntity();
+
+        pilotesEntity.setName(pilotesDto.getName());
+        pilotesEntity.setSurname(pilotesDto.getSurname());
+
+        return pilotesEntity;
     }
 }

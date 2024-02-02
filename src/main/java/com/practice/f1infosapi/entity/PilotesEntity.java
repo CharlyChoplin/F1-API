@@ -2,8 +2,10 @@ package com.practice.f1infosapi.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 @Entity
 @Table(name = "pilotes")
 public class PilotesEntity {
