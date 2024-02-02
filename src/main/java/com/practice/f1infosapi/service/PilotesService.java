@@ -1,12 +1,12 @@
 package com.practice.f1infosapi.service;
 
 import com.practice.f1infosapi.entity.PilotesEntity;
+import com.practice.f1infosapi.exception.F1NotFoundException;
 import com.practice.f1infosapi.repository.PilotesRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -16,7 +16,9 @@ public class PilotesService {
         return pilotesRepository.findAll();
     }
 
-    public Optional<PilotesEntity> getById(int id) {
-        return pilotesRepository.findById(id);
+    public PilotesEntity getById(int id) {
+        return pilotesRepository.findById(id).orElseThrow(
+                () -> new F1NotFoundException("Pilote not found")
+        );
     }
 }
