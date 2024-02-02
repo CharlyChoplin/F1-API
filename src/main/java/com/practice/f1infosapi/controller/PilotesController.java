@@ -17,7 +17,6 @@ import java.util.List;
 public class PilotesController {
     private final PilotesService pilotesService;
     private final PilotesMapper pilotesMapper;
-    private final PilotesRepository pilotesRepository;
 
     // Get all drivers
     @GetMapping("/api/v1/pilotes")
