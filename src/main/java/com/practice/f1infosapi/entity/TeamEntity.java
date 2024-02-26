@@ -7,15 +7,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "team")
+@Table(name = "teams")
 public class TeamEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @Column(name = "name")
     private String name;
-    @Column(name = "team_principal_name")
-    private String teamPrincipalName;
-    @Column(name = "team_principal_surname")
-    private String teamPrincipalSurname;
+
+    @Column(name = "team_principal_first_name")
+    private String teamPrincipalFirstName;
+
+    @Column(name = "team_principal_last_name")
+    private String teamPrincipalLastName;
 }

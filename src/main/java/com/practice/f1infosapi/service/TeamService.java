@@ -34,8 +34,8 @@ public class TeamService {
             TeamEntity teamToUpdate = getById(form.getId());
 
             teamToUpdate.setName(form.getName());
-            teamToUpdate.setTeamPrincipalName(form.getTeamPrincipalName());
-            teamToUpdate.setTeamPrincipalSurname(form.getTeamPrincipalSurname());
+            teamToUpdate.setTeamPrincipalFirstName(form.getTeam_principal_first_name());
+            teamToUpdate.setTeamPrincipalLastName(form.getTeam_principal_last_name());
             return teamRepository.save(teamToUpdate);
         }
     }

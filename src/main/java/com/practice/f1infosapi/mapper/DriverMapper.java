@@ -12,8 +12,8 @@ public class DriverMapper {
         DriverResponseDto driverResponseDto = new DriverResponseDto();
 
         driverResponseDto.setId(driverEntity.getId());
-        driverResponseDto.setName(driverEntity.getName());
-        driverResponseDto.setSurname(driverEntity.getSurname());
+        driverResponseDto.setName(driverEntity.getFirstName());
+        driverResponseDto.setSurname(driverEntity.getLastName());
         driverResponseDto.setAge(driverEntity.getAge());
         driverResponseDto.setWin(driverEntity.getWin());
         driverResponseDto.setMain(driverEntity.getMain());
@@ -25,8 +25,8 @@ public class DriverMapper {
     public DriverEntity toEntity(DriverFormDto driverResponseDto, TeamEntity teamEntity) {
         DriverEntity driverEntity = new DriverEntity();
 
-        driverEntity.setName(driverResponseDto.getName());
-        driverEntity.setSurname(driverResponseDto.getSurname());
+        driverEntity.setFirstName(driverResponseDto.getFirstName());
+        driverEntity.setLastName(driverResponseDto.getLastName());
         driverEntity.setAge(driverResponseDto.getAge());
         driverEntity.setWin(driverResponseDto.getWin());
         driverEntity.setMain(driverResponseDto.getMain());

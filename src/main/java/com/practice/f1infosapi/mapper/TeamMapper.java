@@ -11,8 +11,8 @@ public class TeamMapper {
 
         teamDto.setId(teamEntity.getId());
         teamDto.setName(teamEntity.getName());
-        teamDto.setTeamPrincipalName(teamEntity.getTeamPrincipalName());
-        teamDto.setTeamPrincipalSurname(teamEntity.getTeamPrincipalSurname());
+        teamDto.setTeam_principal_first_name(teamEntity.getTeamPrincipalFirstName());
+        teamDto.setTeam_principal_last_name(teamEntity.getTeamPrincipalLastName());
 
         return teamDto;
     }
@@ -21,8 +21,8 @@ public class TeamMapper {
         TeamEntity teamEntity = new TeamEntity();
 
         teamEntity.setName(teamDto.getName());
-        teamEntity.setTeamPrincipalName(teamDto.getTeamPrincipalName());
-        teamEntity.setTeamPrincipalSurname(teamDto.getTeamPrincipalSurname());
+        teamEntity.setTeamPrincipalFirstName(teamDto.getTeam_principal_first_name());
+        teamEntity.setTeamPrincipalLastName(teamDto.getTeam_principal_last_name());
 
         return teamEntity;
     }

@@ -10,13 +10,16 @@ import lombok.Setter;
 @Setter
 public class DriverFormDto {
     private Integer id;
-    @NotNull(message = "Name field can't be null")
-    @NotBlank(message = "Name field can't be empty")
-    private String name;
-    private String surname;
+
+    private String firstName;
+
+    private String lastName;
+
     private Integer age;
+
     private Integer win;
+
     private Boolean main;
-    @JsonProperty("team_id")
+
     private Integer teamId;
 }
