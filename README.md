@@ -10,3 +10,7 @@ I'll learn to use many dependencies like :
 * Springboot starter data jpa
 * Springboot starter validation
 * flyway
+* jjwt-api
+* jjwt-impl
+* jjwt-jackson
+* commons-lang3
