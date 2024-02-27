@@ -50,4 +50,6 @@ VALUES
     (1, 'admin', 'admin', 'admin@admin.fr', '$2a$10$MFB8pvvtama9Va4sglnUAu4Bx7tKR7IR2cmkzFlxo6xeeA/3FtVbq', 'ROLE_ADMIN'),
     (2, 'user', 'user', 'user@user.com', '$2a$10$KHPWrK3QF00/dQoND.o9q.Z1Ea3RDHyh8VGFC9IpZhJPEYDwlSLpu', 'ROLE_USER');
 
--- todo : fix starting count while creating
+SELECT setval('teams_id_seq', (SELECT MAX(ID) FROM Teams));
+SELECT setval('drivers_id_seq', (SELECT MAX(ID) FROM Drivers));
+SELECT setval('users_id_seq', (SELECT MAX(ID) FROM Users));

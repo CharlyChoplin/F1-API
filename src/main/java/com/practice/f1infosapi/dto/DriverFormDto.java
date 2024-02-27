@@ -11,8 +11,10 @@ import lombok.Setter;
 public class DriverFormDto {
     private Integer id;
 
+    @JsonProperty(value = "first_name")
     private String firstName;
 
+    @JsonProperty(value = "last_name")
     private String lastName;
 
     private Integer age;
@@ -21,5 +23,6 @@ public class DriverFormDto {
 
     private Boolean main;
 
+    @JsonProperty(value = "team_id")
     private Integer teamId;
 }
